@@ -3,7 +3,7 @@ import jwt from 'jsonwebtoken';
 import dotenv from 'dotenv';
 
 // Load environment variables from .env.dev when running in development
-dotenv.config(); 
+dotenv.config();
 
 const JWT_SECRET = process.env.JWT_SECRET;
 if (!JWT_SECRET) {
@@ -26,5 +26,5 @@ export const authMiddleware: express.RequestHandler = (req, res, next) => {
     res.status(401).json({ error: 'Invalid token' });
     return;
   }
-  
+
 };
