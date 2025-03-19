@@ -14,7 +14,7 @@ RUN npm install
 COPY . .
 
 # Exponha a porta que o servidor usará
-EXPOSE 3000
+EXPOSE 3001
 
 # Comando para iniciar o servidor
-CMD ["npm", "start"]
+CMD ["npx", "ts-node", "src/index.ts"]
